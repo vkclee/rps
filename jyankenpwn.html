@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//CPU chooses RPS - computerPlay - computerSelection
+function computerPlay() {
+    let random = ['rock', 'paper', 'scissor'];
+    return random[Math.floor(Math.random()*3)];
+}
+//User choose RPS - playerSelection
+let choice = prompt('Rock, Paper, or Scissors?');
+console.log(choice);
+//Find winner
+function playRound(playerSelection, computerSelection) {
+console.log(computerSelection);
+if (playerSelection == computerSelection) return "Tie";
+else if (playerSelection == 'rock' && computerSelection == 'scissor') return "Win";
+else if (playerSelection == 'rock' && computerSelection == 'paper') return "Lose";
+else if (playerSelection == 'paper' && computerSelection == 'rock') return "Win";
+else if (playerSelection == 'paper' && computerSelection == 'scissor') return" Lose";
+else if (playerSelection == 'scissor' && computerSelection == 'paper') return "Win";
+else (playerSelection == 'scissor' && computerSelection == 'rock') ; "Lose"
+}
+const playerSelection = choice.toLowerCase();
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
+
+
+
+    </script>
+</body>
+</html>
